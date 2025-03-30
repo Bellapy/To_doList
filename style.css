@@ -1,63 +1,103 @@
-.task_container{
-    width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 20px;
-    padding: 0 !important;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding-bottom: 5px;
-}
 body{
-    display: flex;
-    background-color: rgb(26, 1, 48);
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
+    background-color: #6C808C;
+    background-size: cover;
+    background-position: center;
+    
 }
-#sombra_roxa{
-    position: absolute;
-    filter: blur(200px); 
-    background-color: rgba(137, 43, 226, 0.516);
-    width: 500px;
-    height: 400px;
-    right: 0;
-    bottom: 0;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+:root {
+    --azul-acinzentado: #9FB0BF;  
+    --azul-claro: #B8CAD9;   
+    --azul-escuro: #6C808C;        
+    --branco: #F2F2F2;     
+    --preto: #0d0d0d8a;
+    --cinza: #dcdada;
 }
-#sombra_roxa2{
-    top: 0;      /* Alinha ao topo da tela */
-    left: 0;     /* Alinha à esquerda da tela */
-    position: absolute;
-    filter: blur(200px); 
-    background-color: rgba(137, 43, 226, 0.516);
-    width: 500px;
-    height: 400px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-#container{
-    display: flex;
-    flex-direction: column;
-    padding: 2%;
-    align-items: center;
-    height: 500px;
-    width: 400px;
-    background-color: rgba(240, 248, 255, 0.351);
-    border-radius: 3%;
-    box-shadow: 1px 1px 40px rgba(255, 255, 255, 0.479);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
 }
 h1{
-
-    font-family: "Montserrat", sans-serif;
-    color: rgb(199, 177, 204);
-    font-size: x-large;
+   
+    margin-bottom: 10px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
 }
-#novaTarefa{
-    width: 80%;
-    height: 7%;
-    border-radius: 10px;
+
+img {
+    height: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; 
+    margin: 8px;
+    cursor: pointer;
+   
+}
+
+.container {
+    background-color: var(--cinza);
+    width: 500px;
+    border-radius: 10px; 
+    padding: 20px;
+    margin: 100px auto 0;
+    position: relative;
+    min-height: 300px;
+    height: auto;
+}
+
+.input-task {
     border: none;
+    border-radius: 10px;
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    
+}
+
+.button-task {
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: var(--azul-escuro);
+    color: #ffffff;
+    font-size: 13px;
+    padding: 0 15px;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+.button-task:hover {
+    opacity: 0.8;
+}
+
+.list-task {
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.task {
+    background-color: var(--azul-acinzentado);
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2); /* Corrigido aqui */
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 0 10px; /* Espaçamento nas laterais */
+    font-family: 'Arial', sans-serif; 
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: var(--preto);
+}
+.task:hover img{
+    opacity: 1;
+
+}
+.done{
+    background-color: var(--azul-claro)
+}
+
+.task p {
+    margin-right: auto; /* Isso faz com que o texto vá para a esquerda */
 }
